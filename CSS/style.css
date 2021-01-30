@@ -1,0 +1,70 @@
+:root {
+--margin: 5px;
+--bcolor: black;
+--bwidth: 2px;
+--bstyle: solid;
+}
+
+.menu {
+  border-style: var(--bstyle);
+  border-width: var(--bwidth);
+  border-color: var(--bcolor);
+  margin: var(--margin);
+}
+
+ul.l1{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li.i1 {
+  float: left;
+}
+
+li.i1 a {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+}
+
+li.i1 a:hover {
+  background-color: grey;
+}
+
+.detail {
+  border-style: var(--bstyle);
+  border-width: var(--bwidth);
+  border-color: var(--bcolor);
+  margin: var(--margin);
+}
+
+.service {
+  border-style: var(--bstyle);
+  border-width: var(--bwidth);
+  border-color: var(--bcolor);
+  margin: var(--margin);
+}
+
+.time {
+  border-style: var(--bstyle);
+  border-width: var(--bwidth);
+  border-color: var(--bcolor);
+  margin: var(--margin);
+}
+
+.adres {
+  border-style: var(--bstyle);
+  border-width: var(--bwidth);
+  border-color: var(--bcolor);
+  margin: var(--margin);
+}
+
+.news {
+  border-style: var(--bstyle);
+  border-width: var(--bwidth);
+  border-color: var(--bcolor);
+  margin: var(--margin);
+}
