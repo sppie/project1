@@ -42,7 +42,6 @@ echo "Connected successfully";
         $sql = "select * from med order by med ASC";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
-          // output data of each row
           while($row = $result->fetch_assoc()) {
             echo "medicijn: " . $row["med"]. "<br>";
           }

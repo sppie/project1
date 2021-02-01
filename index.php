@@ -35,12 +35,27 @@ echo "Connected successfully";
     </ul>
   </div>
   <div class="slideshow">
-    <img src="img/placeholder.png" width="100" height="100">
-    <h5>placeholder slide show</h5>
+    <img class="slide" src="img/placeholder1.png" alt="a placeholder image" width="100" height="100">
+    <img class="slide" src="img/placeholder.png" alt="a placeholder image" width="100" height="100">
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("slide");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000);
+  }
+</script>
   </div>
   <div class="location">
-    <img src="img/placeholder.png" width="100" height="100">
-    <h5>placeholder locatie</h5>
+    <iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=500&amp;height=500&amp;hl=nl&amp;q=Hofstraat%2013,%201741%20CD%20Schagen+(ROC%20Kop%20Noord-Holland)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
   </div>
   <div class="service">
     <h3>Onze service</h3>
@@ -51,15 +66,21 @@ echo "Connected successfully";
     </ul>
   </div>
   <div class="time">
-    <p>openingstijden</p>
+    <h5>Openingstijden</h5>
+    <p>
+      Maandag-Vrijdag 00:00 <br>
+      Zaterdag 00:00 <br>
+      Zondag 00:00 <br>
+    </p>
   </div>
   <div class="adres">
-    <p>adres</p>
+    <h5>Adres</h5>
+    <p>Hofstraat 13, 1741 CD Schagen</p>
   </div>
   <div class="news">
     <p>
       <?php
-        $sql = "SELECT * FROM news ORDER BY news. ins_date DESC";
+        $sql = "SELECT * FROM news ORDER BY news. ins_date DESC LIMIT 3";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
           // output data of each row

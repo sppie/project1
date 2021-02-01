@@ -31,7 +31,11 @@ li.i1 a {
 }
 
 li.i1 a:hover {
-  background-color: grey;
+  background-color: gray;
+}
+
+ul.l3 {
+  list-style-type: none;
 }
 
 .detail {

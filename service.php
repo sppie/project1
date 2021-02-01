@@ -15,7 +15,26 @@
     </ul>
   </div>
   <div class="detail">
-    <p>text goes here</p>
+    <p>
+      Diensten <br>
+      <br>
+      De teams van onze BENU Apotheken staan graag voor u klaar. In onze dienstverlening staat u dan ook centraal. We willen u graag zekerheid en veel gemak bieden. Bij BENU apotheek hebben wij daarom diverse (online) services waarvan u gebruik kunt maken. Een paar voorbeelden: <br>
+      <br>
+    </p>
+    <ul class="l3">
+      <li class="i3">Diabetesservice</li>
+      <li class="i3">Herhaalservice</li>
+      <li class="i3">Uw medicijnen staan klaar</li>
+      <li class="i3">Inhalatie instructies</li>
+      <li class="i3">Mijn APO App</li>
+      <li class="i3">Webshop</li>
+    </ul>
+    <p>
+      <br>
+      De online diensten van uw apotheek <br>
+      Ga naar 'diensten' bij uw apotheek en kijk hoe we u online kunnen helpen. <br>
+      Volg de instructies en schrijf u in.
+    </p>
   </div>
 </body>
 </html>
