@@ -38,6 +38,12 @@ ul.l3 {
   list-style-type: none;
 }
 
+ul.l3 > li:before {
+  content: "-";
+  position: absolute;
+  margin-left: -0.5em;
+}
+
 .detail {
   border-style: var(--bstyle);
   border-width: var(--bwidth);

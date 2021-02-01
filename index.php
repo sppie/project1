@@ -4,18 +4,11 @@ $database = "aposite";
 $username = "root";
 $password = "";
 
-// Create connection
-
 $conn = mysqli_connect($servername, $username, $password, $database);
-
-// Check connection
 
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
-
-echo "Connected successfully";
-
 ?>
 
 <html>
@@ -80,20 +73,22 @@ echo "Connected successfully";
   <div class="news">
     <p>
       <?php
-        $sql = "SELECT * FROM news ORDER BY news. ins_date DESC LIMIT 3";
+        $sql = "SELECT * FROM news ORDER BY news. art_ins_date DESC LIMIT 3";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
           // output data of each row
           while($row = $result->fetch_assoc()) {
-            echo $row["title"]. "<br>";
+            echo $row["art_title"]. "<br>";
           }
         } else {
           echo "er zijn geen resultaten";
         }
-
-        mysqli_close($conn);
       ?>
     </p>
   </div>
 </body>
 </html>
+
+<?php
+mysqli_close($conn);
+ ?>

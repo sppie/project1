@@ -1,19 +1,3 @@
-<?php
-$servername = "localhost";
-$database = "aposite";
-$username = "root";
-$password = "";
-
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
-}
-
-$email = $username = $password = "";
-$emailEr = $usernameEr = $passwordEr = "";
-?>
-
 <html>
 <head>
   <link rel="stylesheet" href="CSS/style.css">
@@ -31,9 +15,7 @@ $emailEr = $usernameEr = $passwordEr = "";
     </ul>
   </div>
   <div class="detail">
-    Email: <input type="text" name="email" value="<?php echo $email;?>">
-    <input type="submit" name="submit" value="Submit">
-    <?php echo $email ?>
+    <p>your account</p>
   </div>
 </body>
 </html>

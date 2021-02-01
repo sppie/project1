@@ -1,9 +1,8 @@
 <html>
 <head>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/style.css"/>
 </head>
 <body>
-  <h1>basic wip</h1>
   <img src="img/placeholder.png" width="100" height="100">
   <div class="menu">
     <h4>menu</h4>
