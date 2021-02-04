@@ -40,10 +40,10 @@ die("Connection failed: " . $conn->connect_error);
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
       }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 2000);
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000);
   }
 </script>
   </div>
@@ -76,7 +76,6 @@ die("Connection failed: " . $conn->connect_error);
         $sql = "SELECT * FROM news ORDER BY news. art_ins_date DESC LIMIT 3";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
-          // output data of each row
           while($row = $result->fetch_assoc()) {
             echo $row["art_title"]. "<br>";
           }
