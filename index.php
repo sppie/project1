@@ -1,10 +1,10 @@
 <?php
 $servername = "localhost";
 $database = "aposite";
-$username = "root";
+$usernamedb = "root";
 $password = "";
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = mysqli_connect($servername, $usernamedb, $password, $database);
 
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);

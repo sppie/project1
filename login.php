@@ -1,10 +1,12 @@
 <?php
+session_start();
+
 $servername = "localhost";
 $database = "aposite";
-$username = "root";
+$usernamedb = "root";
 $password = "";
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = mysqli_connect($servername, $usernamedb, $password, $database);
 
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
@@ -26,7 +28,7 @@ if (isset($_POST['username'])) {
         } else {
           $rows = mysqli_num_rows($result);
           if ($rows == 1) {
-              $_SESSION['username'] = '$username';
+              $_SESSION['username'] = $username;
               // Redirect to user dashboard page
               header("Location: account.php");
             } else {
