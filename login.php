@@ -8,28 +8,34 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
+
 }
 
 if (isset($_POST['username'])) {
         $email = $_REQUEST['email'];
         $username = $_REQUEST['username'];
         $password = $_REQUEST['password'];
+        //$query = "SELECT *  FROM users WHERE username= '$username'";
+        $query    = "SELECT * FROM users WHERE email= '$email' AND username= '$username' AND password= '$password'";
 
-        $query    = "SELECT * FROM users WHERE email= $email
-                      AND username= $username
-                      AND password= $password";
         $result = mysqli_query($conn, $query);
-        $rows = mysqli_num_rows($result);
-        if ($rows == 1) {
-            //$_SESSION['username'] = $username;
-            // Redirect to user dashboard page
-            header("Location: account.php");
+        if ($result == false){
+          echo "<div class='form'>
+                <h3>no match 1</h3><br/>
+                </div>";
         } else {
-            echo "<div class='form'>
-                  <h3>Incorrect username/password/email.</h3><br/>
-                  </div>";
+          $rows = mysqli_num_rows($result);
+          if ($rows == 1) {
+              $_SESSION['username'] = '$username';
+              // Redirect to user dashboard page
+              header("Location: account.php");
+            } else {
+              echo "<div class='form'>
+                    <h3>no match 2</h3><br/>
+                    </div>";
+            }
+          }
         }
-    } else
 ?>
 
 <html>

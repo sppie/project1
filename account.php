@@ -1,3 +1,18 @@
+<?php
+$servername = "localhost";
+$database = "aposite";
+$username = "root";
+$password = "";
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+include("auth_session.php");
+?>
+
 <html>
 <head>
   <link rel="stylesheet" href="CSS/style.css">
@@ -15,7 +30,8 @@
     </ul>
   </div>
   <div class="detail">
-    <p>your account</p>
+    <p>Hey, <?php echo $_SESSION['username']; ?>!</p>
+    <p>this is your account</p>
   </div>
 </body>
 </html>
