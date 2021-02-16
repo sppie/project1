@@ -36,6 +36,7 @@ die("Connection failed: " . $conn->connect_error);
   <div class="detail">
     <p>Hey, <?php echo $_SESSION['username']; ?></p>
     <p>this is your account</p>
+    <a href="orders.php">bestellingen</a>
   </div>
 </body>
 </html>

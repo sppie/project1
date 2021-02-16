@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+$servername = "localhost";
+$database = "aposite";
+$usernamedb = "root";
+$password = "";
+
+$conn = mysqli_connect($servername, $usernamedb, $password, $database);
+
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+
+?>
+
 <html>
 <head>
   <link rel="stylesheet" href="CSS/style.css"/>
