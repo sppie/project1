@@ -55,7 +55,7 @@ die("Connection failed: " . $conn->connect_error);
     <ul class="l2">
       <li class="i2"><a href="service.php">Service</a></li>
       <li class="i2"><a href="medoverview.php">Medicijn overzicht</a></li>
-      <li class="i2"><a href="login.php">Mijn APO</a></li>
+      <li class="i2"><a href="contact.php">contact</a></li>
     </ul>
   </div>
   <div class="time">
